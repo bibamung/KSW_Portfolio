@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'Portfolio | Frontend & Game Logic',
+  title: 'KSW_Portfolio | Game Designer',
   description: 'Personal portfolio highlighting web and game development projects.',
 };
 

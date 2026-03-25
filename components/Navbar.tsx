@@ -37,7 +37,7 @@ export default function Navbar() {
         <div style={{ display: 'flex', gap: '2rem' }}>
           {links.map((link) => {
             const isActive = pathname === link.path || (link.path !== '/' && pathname.startsWith(link.path));
-            
+
             return (
               <Link key={link.path} href={link.path} style={{
                 position: 'relative',
