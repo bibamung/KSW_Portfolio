@@ -14,7 +14,7 @@ export default function About() {
   const experiences = [
     {
       title: '내일배움캠프 게임 기획 과정 이수',
-      icon: <img src="/About/NaeBaeCamp_Logo.png" alt="내일배움캠프 로고" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '50%' }} />,
+      icon: <img src="/about/NaeBaeCamp_Logo.png" alt="내일배움캠프 로고" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '50%' }} />,
       items: [
         {
           date: '2025.03 - 2025.04 (Unity 트랙 기획 커리큘럼 수료)',

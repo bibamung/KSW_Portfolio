@@ -168,7 +168,7 @@ export default function Home() {
               style={{ position: 'relative', height: '400px', borderRadius: '1rem', overflow: 'hidden', border: '1px solid var(--glass-border)', background: 'var(--glass-bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
               <img
-                src="/About/profile_img.png"
+                src="/about/profile_img.png"
                 alt="Profile"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
