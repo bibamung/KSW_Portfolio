@@ -86,6 +86,67 @@ export default function About() {
             </div>
           </div>
 
+          {/* 개인 역량 Section */}
+          <div style={{ marginBottom: '6rem' }}>
+            <h2 className="section-title" style={{ marginBottom: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+              <span className="text-gradient">개인 역량</span>
+            </h2>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', textAlign: 'center', marginBottom: '2rem' }}>
+              게임 기획 및 개발을 위한 다양한 역량을 보유하고 있습니다
+            </p>
+            <div className="skills-grid">
+              {[
+                {
+                  icon: '🎮',
+                  title: '게임 시스템 디자인',
+                  desc: '플레이어 경험을 중심으로 한 시스템 설계'
+                },
+                {
+                  icon: '🕹️',
+                  title: 'UI/UX 디자인',
+                  desc: '직관적이고 사용하기 편한 게임 인터페이스 설계'
+                },
+                {
+                  icon: '💻',
+                  title: '프로그래밍 지식 보유',
+                  desc: '게임 개발에 필요한 기본적인 지식 보유'
+                },
+                {
+                  icon: '📊',
+                  title: '데이터 테이블 작성',
+                  desc: '게임에 필요한 데이터 테이블 작성 및 관리'
+                }
+              ].map((skill, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ y: -6, transition: { duration: 0.25 } }}
+                  style={{
+                    background: 'rgba(15, 20, 40, 0.7)',
+                    border: '1px solid rgba(100, 120, 200, 0.2)',
+                    borderRadius: '1rem',
+                    padding: '2rem 1.5rem',
+                    textAlign: 'center',
+                    cursor: 'default',
+                  }}
+                >
+                  <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
+                    {skill.icon}
+                  </div>
+                  <h3 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '0.75rem', color: 'var(--text-primary)' }}>
+                    {skill.title}
+                  </h3>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                    {skill.desc}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
           <div>
             <h2 className="section-title" style={{ marginBottom: '3rem', textAlign: 'center' }}>
               <span className="text-gradient">Experience & Education</span>
