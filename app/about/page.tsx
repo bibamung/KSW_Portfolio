@@ -13,6 +13,20 @@ export default function About() {
 
   const experiences = [
     {
+      title: '2025 지스타(G-STAR) 부스 참여',
+      icon: <img src="/about/G-Star_logo.jpg" alt="지스타 로고" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '50%' }} />,
+      items: [
+        {
+          date: '2025.11',
+          details: [
+            '지스타 2025 B2C 부스 전시 및 운영 참여',
+            '자체 인디 게임 개발 프로젝트 출품 및 현장 유저 피드백 수집',
+            '현지 관람객 대상 게임 시연 및 부스 이벤트 진행 지원'
+          ]
+        }
+      ]
+    },
+    {
       title: '내일배움캠프 게임 기획 과정 이수',
       icon: <img src="/about/NaeBaeCamp_Logo.png" alt="내일배움캠프 로고" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '50%' }} />,
       items: [
@@ -28,20 +42,6 @@ export default function About() {
           details: [
             'C#, Unity 수강',
             'C# 기초 문법, 알고리즘, Unity 엔진 기초 활용 과정 이수'
-          ]
-        }
-      ]
-    },
-    {
-      title: '2024 지스타(G-STAR) 부스 참여',
-      icon: <img src="/about/G-Star_logo.jpg" alt="지스타 로고" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '50%' }} />,
-      items: [
-        {
-          date: '2024.11',
-          details: [
-            '지스타 2024 B2C 부스 전시 및 운영 참여',
-            '자체 인디 게임 개발 프로젝트 출품 및 현장 유저 피드백 수집',
-            '현지 관람객 대상 게임 시연 및 부스 이벤트 진행 지원'
           ]
         }
       ]
@@ -166,7 +166,7 @@ export default function About() {
               <span className="text-gradient">Experience & Education</span>
             </h2>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
               {experiences.map((exp, index) => (
                 <motion.div
                   key={index}
