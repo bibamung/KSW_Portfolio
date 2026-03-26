@@ -66,9 +66,9 @@ export default function About() {
             </p>
           </div>
 
-          <div style={{ marginBottom: '6rem' }}>
-            <h2 className="section-title" style={{ marginBottom: '3rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
-              <Wrench size={32} className="text-gradient" /> <span className="text-gradient">Tool</span>
+          <div style={{ marginBottom: '6rem', textAlign: 'center' }}>
+            <h2 className="section-title" style={{ marginBottom: '3rem', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0rem' }}>
+              <Wrench size={32} className="text-gradient" style={{ flexShrink: 0 }} /> <span className="text-gradient">Tool</span>
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem' }}>
               {skillCategories.map((category, catIndex) => (
