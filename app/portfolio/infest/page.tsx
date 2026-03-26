@@ -24,18 +24,18 @@ export default function InfestProject() {
             </div>
             <h1 style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)', marginBottom: '1.5rem', lineHeight: 1.1 }}>INFEST</h1>
             <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', lineHeight: 1.6, maxWidth: '800px' }}>
-              점점 거세지는 적의 웨이브를 막아내는 생존 디펜스. 역기획서를 통해 시스템을 분석하고 핵심 BM을 도출했습니다.
+              좀비 웨이브를 격퇴하며 단계별로 패턴이 진화하는 보스를 추적·토벌하는 게임
             </p>
           </div>
 
           <div className="glass-panel" style={{ height: '400px', marginBottom: '4rem', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(3, 7, 18, 0.4)', padding: 0, overflow: 'hidden' }}>
-            <iframe 
-              width="100%" 
-              height="100%" 
-              src="https://www.youtube.com/embed/ZbKr9C13bc4" 
-              title="INFEST Video" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/ZbKr9C13bc4"
+              title="INFEST Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               style={{ borderRadius: 'inherit', border: 'none' }}
             ></iframe>

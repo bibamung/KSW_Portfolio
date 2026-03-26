@@ -8,11 +8,11 @@ export default function SylphidProject() {
   return (
     <div style={{ paddingTop: '8rem', minHeight: '100vh', paddingBottom: '6rem' }}>
       <div className="container" style={{ maxWidth: '1000px' }}>
-        
+
         <Link href="/portfolio" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '2rem' }}>
           <ArrowLeft size={16} /> Back to Projects
         </Link>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -24,23 +24,23 @@ export default function SylphidProject() {
             </div>
             <h1 style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)', marginBottom: '1.5rem', lineHeight: 1.1 }}>Sylpyr</h1>
             <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', lineHeight: 1.6, maxWidth: '800px' }}>
-              바람의 방향과 세기를 이용해 맵을 탐험하는 2D 퍼즐 어드벤처 플랫포머. 레벨 디자인과 각종 환경 기믹을 설계했습니다.
+              신비한 대지를 배경으로 역경을 극복하며 구름 위 세계로 향하는 여정을 담은 TextRPG 게임
             </p>
           </div>
-          
+
           <div className="glass-panel" style={{ height: '400px', marginBottom: '4rem', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(3, 7, 18, 0.4)', padding: 0, overflow: 'hidden' }}>
-            <iframe 
-              width="100%" 
-              height="100%" 
-              src="https://www.youtube.com/embed/H2sojhkOTik" 
-              title="Sylpyr Video" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/H2sojhkOTik"
+              title="Sylpyr Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               style={{ borderRadius: 'inherit', border: 'none' }}
             ></iframe>
           </div>
-          
+
           <div className="glass-panel" style={{ padding: '2.5rem', marginBottom: '4rem' }}>
             <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: 'var(--accent-primary)', marginBottom: '1.5rem' }}>주요 담당업무</h3>
             <div style={{ marginBottom: '2rem', padding: '1.5rem', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '1.5rem', border: '1px solid rgba(255, 255, 255, 0.1)' }}>

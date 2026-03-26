@@ -24,7 +24,7 @@ export default function LastThrowProject() {
             </div>
             <h1 style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)', marginBottom: '1.5rem', lineHeight: 1.1 }}>라스트 투척의 신</h1>
             <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', lineHeight: 1.6, maxWidth: '950px' }}>
-              타이밍과 물리 엔진을 활용한 로그라이크 슈팅 액션 게임.<br /> 무기 해금 시스템을 통해서 플레이 코어루프를 구성하였고, 직관적이고 중독성 있는 플레이 룰을 구축했습니다.
+              스테이지 진행에 따른 무기 해금과 스킬 선택을 통해 새로운 전략을 구사하는 게임
             </p>
           </div>
 

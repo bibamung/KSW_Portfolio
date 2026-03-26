@@ -24,7 +24,7 @@ export default function Pacman3DProject() {
             </div>
             <h1 style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)', marginBottom: '1.5rem', lineHeight: 1.1 }}>TwinTower</h1>
             <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', lineHeight: 1.6, maxWidth: '800px' }}>
-              기존의 ‘팩맨’을 3D로 재해석하고, 새로운 규칙을 추가하여 게임의 진행 방식과 밸런스를 전면적으로 재설계한 개인 프로젝트입니다.
+              방향키 하나로 두 캐릭터를 동시에 조작하며, 동시에 목적지에 도달하는 퍼즐게임
             </p>
           </div>
 

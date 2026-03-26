@@ -24,9 +24,7 @@ export default function RaidProject() {
             </div>
             <h1 style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)', marginBottom: '1.5rem', lineHeight: 1.1 }}>Project:RAID</h1>
             <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', lineHeight: 1.6, maxWidth: '800px', whiteSpace: 'pre-line' }}>
-              &quot;Project:RAID&quot;는 헌팅 액션 장르의 게임으로, 사실적인 그래픽과 복잡한 시스템 대신 직관적이고 간단한 전투 시스템을 채택하여 플레이어가 쉽게 접근할 수 있도록 설계되었습니다.
-              {'\n'}
-              게임은 &apos;탐색 → 추적 → 전투 → 토벌&apos;의 핵심 루프에 집중하며, 애니풍 스타일의 아트와 빠르고 직관적인 피드백을 통해 원활한 게임 플레이 경험을 제공합니다.
+              애니메이션풍 그래픽을 바탕으로 직관적인 전투를 누구나 즐길 수 있는 게임
             </p>
           </div>
 

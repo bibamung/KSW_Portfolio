@@ -12,7 +12,7 @@ export default function Portfolio() {
       icon: '/raid_logo.png',
       image: '/pr_title.png',
       category: '헌팅액션 RPG',
-      description: '팀워크와 전술이 강조되는 협동 FPS 프로젝트. 시스템 기획 및 밸런스 설계 담당.',
+      description: '애니메이션풍 그래픽을 바탕으로 직관적인 전투를 누구나 즐길 수 있는 게임',
       link: '/portfolio/raid',
     },
     {
@@ -21,7 +21,7 @@ export default function Portfolio() {
       icon: '/infest_logo.png',
       image: '/infest_title.png',
       category: '코옵 FPS',
-      description: '몰려오는 적들을 막아내는 웨이브 기반 디펜스. 역기획서를 통한 핵심 BM 도출.',
+      description: '좀비 웨이브를 격퇴하며 단계별로 패턴이 진화하는 보스를 추적·토벌하는 게임',
       link: '/portfolio/infest',
     },
     {
@@ -30,7 +30,7 @@ export default function Portfolio() {
       icon: '/last_logo.png',
       image: '/las_title.png',
       category: '로그라이크 슈팅 액션',
-      description: '타이밍과 물리 엔진을 활용한 액션 기획. 재밌는 플레이 룰 구축.',
+      description: '스테이지 진행에 따른 무기 해금과 스킬 선택을 통해 새로운 전략을 구사하는 게임',
       link: '/portfolio/last-throw',
     },
     {
@@ -39,7 +39,7 @@ export default function Portfolio() {
       icon: '/sylpyr_logo.png',
       image: '/sylpyr_title.png',
       category: 'TextRPG',
-      description: '바람을 이용한 퍼즐 어드벤처 플랫포머. 레벨 디자인과 기믹 설계 참여.',
+      description: '신비한 대지를 배경으로 역경을 극복하며 구름 위 세계로 향하는 여정을 담은 TextRPG 게임',
       link: '/portfolio/sylphid',
     },
     {
@@ -48,7 +48,7 @@ export default function Portfolio() {
       icon: '/twintower_logo.png',
       image: '/twintower_title.png',
       category: '퍼즐',
-      description: '기존의 팩맨을 3D로 재해석하고 새로운 규칙을 추가하여 밸런스를 재설계.',
+      description: '방향키 하나로 두 캐릭터를 동시에 조작하며, 동시에 목적지에 도달하는 퍼즐게임',
       link: '/portfolio/twintower',
     }
   ];
