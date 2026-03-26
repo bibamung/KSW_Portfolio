@@ -73,11 +73,11 @@ export default function Home() {
                 <span className="text-gradient">About Me</span>
               </h2>
               <div className="glass-panel" style={{ padding: '2rem', borderLeft: '4px solid var(--accent-primary)' }}>
-                <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem', lineHeight: 1.8 }}>
-                  프로젝트를 진행하던 중에 저는 대학교 시절에 배웠던 지식을 기반으로 빠르게 진행할 수 있었습니다. 기획 커리큘럼에서 진행했던 역기획서, BM, 시스템 기획 과제를 바탕으로 최종 프로젝트의 기획서를 작성하였고, 2달 안에 코옵 FPS게임을 개발을 마무리 할 수 있었습니다.
+                <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: 1.8 }}>
+                  기획자는 기획만 잘해서는 부족하다고 생각합니다. 개발자의 언어를 이해해야 소통이 원활해지고, 아트의 방향성을 알아야 세계관을 온전히 설계할 수 있습니다. 저는 기획 역량을 중심에 두되, 개발·아트·UX 등 다양한 영역에 대한 폭넓은 이해를 쌓기 위해 꾸준히 노력해왔습니다.
                 </p>
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.8 }}>
-                  끝난 이후에도 기획 스터디와 다양한 프로젝트에 참여하면서 기획자로서의 첫 발걸음을 준비하고 있습니다.
+                  각 분야의 지식이 유기적으로 맞물릴 때 더 나은 기획이 완성된다는 것을 경험을 통해 배웠기 때문입니다. 앞으로도 게임 산업의 흐름과 새로운 트렌드를 지속적으로 학습하며, 어떤 상황에서도 팀에 실질적인 기여를 할 수 있는 유연한 기획자로 성장해 나가겠습니다.
                 </p>
                 <div style={{ marginTop: '2rem' }}>
                   <Link href="/about" style={{ color: 'white', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontWeight: 500 }}>
