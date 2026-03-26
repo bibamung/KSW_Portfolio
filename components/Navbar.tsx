@@ -57,38 +57,37 @@ export default function Navbar() {
           {/* Desktop Links */}
           <div className="desktop-only" style={{ display: 'flex', gap: '2rem' }}>
             {links.map((link) => {
-              const isActive = pathname === link.path || (link.path !== '/' && pathname.startsWith(link.path));
+                const isActive = pathname === link.path || (link.path !== '/' && pathname.startsWith(link.path));
 
-              return (
-                <Link key={link.path} href={link.path} style={{
-                  position: 'relative',
-                  fontWeight: 500,
-                  color: isActive ? 'var(--text-primary)' : 'var(--text-secondary)',
-                  transition: 'color 0.2s ease',
-                  padding: '0.5rem 0'
-                }}>
-                  {link.name}
-                  {isActive && (
-                    <motion.div
-                      layoutId="nav-underline"
-                      initial={{ scaleX: 0 }}
-                      animate={{ scaleX: 1 }}
-                      transition={{ duration: 0.25, ease: 'easeOut' }}
-                      style={{
-                        position: 'absolute',
-                        bottom: -2,
-                        left: 0,
-                        right: 0,
-                        height: '2px',
-                        background: 'var(--accent-gradient)',
-                        borderRadius: '2px',
-                        transformOrigin: 'center'
-                      }}
-                    />
-                  )}
-                </Link>
-              );
-            })}
+                return (
+                  <Link key={link.path} href={link.path} style={{
+                    position: 'relative',
+                    fontWeight: 500,
+                    color: isActive ? 'var(--text-primary)' : 'var(--text-secondary)',
+                    transition: 'color 0.2s ease',
+                    padding: '0.5rem 0'
+                  }}>
+                    {link.name}
+                    {isActive && (
+                      <motion.div
+                        initial={{ scaleX: 0, opacity: 0 }}
+                        animate={{ scaleX: 1, opacity: 1 }}
+                        transition={{ duration: 0.3, ease: 'easeOut' }}
+                        style={{
+                          position: 'absolute',
+                          bottom: -2,
+                          left: 0,
+                          right: 0,
+                          height: '2px',
+                          background: 'var(--accent-gradient)',
+                          borderRadius: '2px',
+                          transformOrigin: 'center'
+                        }}
+                      />
+                    )}
+                  </Link>
+                );
+              })}
           </div>
 
           {/* Mobile Toggle */}
