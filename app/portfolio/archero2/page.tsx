@@ -6,7 +6,7 @@ import { ArrowLeft } from 'lucide-react';
 
 export default function Archero2Project() {
   return (
-    <div style={{ paddingTop: '8rem', minHeight: '100vh', paddingBottom: '6rem' }}>
+    <div className="page-pt" style={{ minHeight: '100vh', paddingBottom: '6rem' }}>
       <div className="container" style={{ maxWidth: '1000px' }}>
 
         <Link href="/portfolio" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '2rem' }}>
@@ -34,9 +34,9 @@ export default function Archero2Project() {
           </div>
 
           {/* 기획 의도 */}
-          <div className="glass-panel" style={{ padding: '2.5rem', marginBottom: '4rem' }}>
+          <div className="glass-panel card-padding" style={{ marginBottom: '4rem' }}>
             <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: 'var(--accent-primary)', marginBottom: '1.5rem' }}>기획 의도</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+            <div className="responsive-grid">
               <div style={{ padding: '1.5rem', borderRadius: '1.5rem', border: '1px solid rgba(139, 92, 246, 0.4)', background: 'rgba(3, 7, 18, 0.3)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <h4 style={{ fontSize: '1.15rem', marginBottom: '0.75rem', fontWeight: 600, color: '#fff' }}>"궁수의 전설2" 재미요소 분석</h4>
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, fontSize: '0.95rem' }}>
@@ -59,9 +59,9 @@ export default function Archero2Project() {
           </div>
 
           {/* 재미 요소 분석 */}
-          <div className="glass-panel" style={{ padding: '2.5rem', marginBottom: '4rem' }}>
+          <div className="glass-panel card-padding" style={{ marginBottom: '4rem' }}>
             <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: 'var(--accent-primary)', marginBottom: '1.5rem' }}>재미 요소 분석</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+            <div className="responsive-grid">
               <div style={{ padding: '1.5rem', borderRadius: '1.5rem', border: '1px solid rgba(139, 92, 246, 0.4)', background: 'rgba(3, 7, 18, 0.3)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <h4 style={{ fontSize: '1.15rem', marginBottom: '0.75rem', fontWeight: 600, color: '#fff' }}>변칙성과 다양한 스킬 선택</h4>
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, fontSize: '0.95rem' }}>
@@ -78,9 +78,9 @@ export default function Archero2Project() {
           </div>
 
           {/* 신규 콘텐츠 기획 - 스테이지 배틀 모드 */}
-          <div className="glass-panel" style={{ padding: '2.5rem', marginBottom: '4rem' }}>
+          <div className="glass-panel card-padding" style={{ marginBottom: '4rem' }}>
             <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: 'var(--accent-primary)', marginBottom: '1.5rem' }}>신규 콘텐츠 기획: 스테이지 배틀 모드</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+            <div className="responsive-grid">
               <div style={{ padding: '1.5rem', borderRadius: '1.5rem', border: '1px solid rgba(139, 92, 246, 0.4)', background: 'rgba(3, 7, 18, 0.3)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <h4 style={{ fontSize: '1.15rem', marginBottom: '0.75rem', fontWeight: 600, color: '#fff' }}>기획 의도</h4>
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, fontSize: '0.95rem' }}>

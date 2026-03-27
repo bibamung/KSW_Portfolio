@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div style={{ paddingTop: '6rem', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div className="page-pt" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
 
       {/* Hero Section */}
       <section className="section" style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', position: 'relative' }}>
@@ -61,7 +61,7 @@ export default function Home() {
       {/* About Me Snippet Section */}
       <section className="section" style={{ background: 'rgba(17, 24, 39, 0.4)', borderTop: '1px solid var(--glass-border)', borderBottom: '1px solid var(--glass-border)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center' }}>
+          <div className="responsive-grid" style={{ alignItems: 'center', gap: '2rem' }}>
 
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -72,7 +72,7 @@ export default function Home() {
               <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '2rem' }}>
                 <span className="text-gradient">About Me</span>
               </h2>
-              <div className="glass-panel" style={{ padding: '2rem', borderLeft: '4px solid var(--accent-primary)' }}>
+              <div className="glass-panel card-padding" style={{ borderLeft: '4px solid var(--accent-primary)' }}>
                 <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: 1.8 }}>
                   기획자는 기획만 잘해서는 부족하다고 생각합니다. 개발자의 언어를 이해해야 소통이 원활해지고, 아트의 방향성을 알아야 세계관을 온전히 설계할 수 있습니다. 저는 기획 역량을 중심에 두되, 개발·아트·UX 등 다양한 영역에 대한 폭넓은 이해를 쌓기 위해 꾸준히 노력해왔습니다.
                 </p>

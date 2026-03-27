@@ -54,7 +54,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <div style={{ paddingTop: '8rem', minHeight: '100vh', paddingBottom: '6rem' }}>
+    <div className="page-pt" style={{ minHeight: '100vh', paddingBottom: '6rem' }}>
       <div className="container">
 
         <motion.div
@@ -71,7 +71,7 @@ export default function Portfolio() {
           </p>
         </motion.div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+        <div className="responsive-grid" style={{ gap: '2rem' }}>
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -168,7 +168,7 @@ export default function Portfolio() {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+          <div className="responsive-grid" style={{ gap: '2rem' }}>
             {/* 궁수의 전설2 */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}

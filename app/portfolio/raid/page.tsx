@@ -6,7 +6,7 @@ import { ArrowLeft } from 'lucide-react';
 
 export default function RaidProject() {
   return (
-    <div style={{ paddingTop: '8rem', minHeight: '100vh', paddingBottom: '6rem' }}>
+    <div className="page-pt" style={{ minHeight: '100vh', paddingBottom: '6rem' }}>
       <div className="container" style={{ maxWidth: '1000px' }}>
 
         <Link href="/portfolio" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '2rem' }}>
@@ -41,9 +41,9 @@ export default function RaidProject() {
             ></iframe>
           </div>
 
-          <div className="glass-panel" style={{ padding: '2.5rem', marginBottom: '4rem' }}>
+          <div className="glass-panel card-padding" style={{ marginBottom: '4rem' }}>
             <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: 'var(--accent-primary)', marginBottom: '1.5rem' }}>주요 담당업무</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+            <div className="responsive-grid">
               <div style={{ padding: '1.5rem', borderRadius: '1.5rem', border: '1px solid rgba(139, 92, 246, 0.4)', background: 'rgba(3, 7, 18, 0.3)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <h4 style={{ fontSize: '1.15rem', marginBottom: '0.75rem', fontWeight: 600, color: '#fff' }}>NPC 대화 시스템 설계</h4>
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, fontSize: '0.95rem' }}>
