@@ -49,7 +49,7 @@ export default function About() {
   ];
 
   return (
-    <div style={{ paddingTop: '8rem', minHeight: '100vh', paddingBottom: '4rem' }}>
+    <div className="page-pt" style={{ minHeight: '100vh', paddingBottom: '4rem' }}>
       <div className="container" style={{ maxWidth: '900px' }}>
 
         <motion.div
@@ -70,9 +70,9 @@ export default function About() {
             <h2 className="section-title" style={{ marginBottom: '3rem', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0rem' }}>
               <Wrench size={32} className="text-gradient" style={{ flexShrink: 0 }} /> <span className="text-gradient">Tool</span>
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem' }}>
+            <div className="responsive-grid">
               {skillCategories.map((category, catIndex) => (
-                <div key={catIndex} className="glass-panel" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column' }}>
+                <div key={catIndex} className="glass-panel card-padding" style={{ display: 'flex', flexDirection: 'column' }}>
                   <h3 style={{ fontSize: '1.125rem', marginBottom: '1rem', fontWeight: 600, color: 'var(--accent-primary)' }}>{category.name}</h3>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
                     {category.skills.map((skill, index) => (
@@ -174,8 +174,7 @@ export default function About() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="glass-panel"
-                  style={{ padding: '2rem', display: 'flex', gap: '1.5rem' }}
+                  className="glass-panel card-padding mobile-flex-col"
                 >
                   <div style={{
                     minWidth: '60px',
@@ -215,7 +214,7 @@ export default function About() {
             <h2 className="section-title" style={{ marginBottom: '2rem' }}>
               <span className="text-gradient">Full Story</span>
             </h2>
-            <div className="glass-panel" style={{ padding: '3rem', textAlign: 'left' }}>
+            <div className="glass-panel card-padding" style={{ textAlign: 'left' }}>
               <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem', lineHeight: 1.8 }}>
                 대학교에서 진행한 1인 프로젝트는 저에게 창의적으로 문제를 해결하는 능력을 길러준 중요한 경험이었습니다. 기존의 ‘팩맨’을 3D로 재해석하고 새로운 규칙을 추가하여, 게임의 진행 방식과 밸런스를 전면적으로 재설계했습니다. 이 과정에서 새로운 룰을 설계하는 일이 기획자에게 얼마나 중요한 역할인지를 체감할 수 있었습니다. 기획 역량을 키우기 위해 인사이트를 찾아보던 중 "내일배움캠프"를 알게 되어 지원하게 되었고, 개발적인 지식과 기획적인 지식을 모두 공부할 수 있었습니다.
               </p>

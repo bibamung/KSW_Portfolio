@@ -5,7 +5,7 @@ import { Download, FileText, Eye } from 'lucide-react';
 
 export default function DownloadPage() {
   return (
-    <div style={{ paddingTop: '6rem', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div className="page-pt" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
 
       <section className="section" style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
         {/* Background glow */}
@@ -30,7 +30,7 @@ export default function DownloadPage() {
             transition={{ duration: 0.8 }}
             style={{ textAlign: 'center', marginBottom: '3rem' }}
           >
-            <h1 style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)', marginBottom: '1rem' }}>
+            <h1 style={{ fontSize: 'clamp(2rem, 5vw, 4rem)', marginBottom: '1rem', wordBreak: 'keep-all' }}>
               <span className="text-gradient">포트폴리오 다운로드</span>
             </h1>
             <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '500px', margin: '0 auto' }}>
@@ -48,10 +48,9 @@ export default function DownloadPage() {
             }}
           >
             {/* PDF Card */}
-            <div className="glass-panel" style={{
-              padding: '2.5rem',
-              textAlign: 'center',
-            }}>
+            <div className="glass-panel card-padding" style={{
+                textAlign: 'center',
+              }}>
               {/* File icon */}
               <div style={{
                 width: '80px',
