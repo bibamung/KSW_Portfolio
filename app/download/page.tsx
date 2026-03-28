@@ -49,8 +49,8 @@ export default function DownloadPage() {
           >
             {/* PDF Card */}
             <div className="glass-panel card-padding" style={{
-                textAlign: 'center',
-              }}>
+              textAlign: 'center',
+            }}>
               {/* File icon */}
               <div style={{
                 width: '80px',
