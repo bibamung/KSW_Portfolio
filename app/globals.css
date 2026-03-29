@@ -320,3 +320,26 @@ a:hover {
   padding: 1rem 0;
   border-bottom: 1px solid var(--glass-border);
 }
+
+/* Custom Cursor Management for Game Experience */
+.home-game-container {
+  cursor: none;
+}
+
+.home-game-container a,
+.home-game-container button,
+.home-game-container .btn-primary,
+.home-game-container .btn-secondary,
+.home-game-container .glass-panel,
+.home-game-container .project-card,
+.home-game-container img,
+.home-game-container [role="button"] {
+  cursor: auto;
+}
+
+.home-game-container a:hover,
+.home-game-container button:hover,
+.home-game-container .btn-primary:hover,
+.home-game-container .btn-secondary:hover {
+  cursor: pointer;
+}

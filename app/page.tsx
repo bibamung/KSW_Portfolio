@@ -3,10 +3,12 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Terminal } from 'lucide-react';
 import Link from 'next/link';
+import GalagaBackground from '@/components/GalagaBackground';
 
 export default function Home() {
   return (
-    <div className="page-pt" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div className="page-pt" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', position: 'relative' }}>
+      <GalagaBackground />
 
       {/* Hero Section */}
       <section className="section" style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', position: 'relative' }}>
@@ -59,7 +61,7 @@ export default function Home() {
       </section>
 
       {/* About Me Snippet Section */}
-      <section className="section" style={{ background: 'rgba(17, 24, 39, 0.4)', borderTop: '1px solid var(--glass-border)', borderBottom: '1px solid var(--glass-border)' }}>
+      <section className="section" style={{ background: 'rgba(17, 24, 39, 0.4)', borderTop: '1px solid var(--glass-border)', borderBottom: '1px solid var(--glass-border)', position: 'relative', zIndex: 1 }}>
         <div className="container">
           <div className="responsive-grid" style={{ alignItems: 'center', gap: '2rem' }}>
 
