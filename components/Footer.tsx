@@ -1,6 +1,18 @@
+'use client';
+
+import { useState } from 'react';
 import { Github, Mail, Linkedin } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Footer() {
+  const [showToast, setShowToast] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('worni5015@gmail.com');
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 1000);
+  };
+
   return (
     <footer style={{
       borderTop: '1px solid var(--glass-border)',
@@ -23,13 +35,40 @@ export default function Footer() {
           <div>
             <h4 style={{ color: 'white', marginBottom: '1rem', fontWeight: 600 }}>Connect</h4>
             <div style={{ display: 'flex', gap: '1rem' }}>
-              <a href="#" style={{ padding: '0.5rem', background: 'var(--glass-bg)', borderRadius: '0.5rem', border: '1px solid var(--glass-border)' }}>
+              <button 
+                onClick={handleCopyEmail}
+                style={{ 
+                  padding: '0.5rem', 
+                  background: 'var(--glass-bg)', 
+                  borderRadius: '0.5rem', 
+                  border: '1px solid var(--glass-border)',
+                  color: 'white',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+                className="hover-glow"
+              >
                 <Mail size={20} />
-              </a>
-              <a href="#" style={{ padding: '0.5rem', background: 'var(--glass-bg)', borderRadius: '0.5rem', border: '1px solid var(--glass-border)' }}>
+              </button>
+              <a 
+                href="https://github.com/bibamung" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ padding: '0.5rem', background: 'var(--glass-bg)', borderRadius: '0.5rem', border: '1px solid var(--glass-border)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                className="hover-glow"
+              >
                 <Github size={20} />
               </a>
-              <a href="#" style={{ padding: '0.5rem', background: 'var(--glass-bg)', borderRadius: '0.5rem', border: '1px solid var(--glass-border)' }}>
+              <a 
+                href="https://www.linkedin.com/in/성원-김-7b4891357" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ padding: '0.5rem', background: 'var(--glass-bg)', borderRadius: '0.5rem', border: '1px solid var(--glass-border)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                className="hover-glow"
+              >
                 <Linkedin size={20} />
               </a>
             </div>
@@ -46,6 +85,34 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} Portfolio. All rights reserved.
         </div>
       </div>
+
+      {/* Toast Notification */}
+      <AnimatePresence>
+        {showToast && (
+          <motion.div
+            initial={{ opacity: 0, y: 20, x: '-50%' }}
+            animate={{ opacity: 1, y: 0, x: '-50%' }}
+            exit={{ opacity: 0, y: 20, x: '-50%' }}
+            style={{
+              position: 'fixed',
+              bottom: '2rem',
+              left: '50%',
+              background: 'var(--accent-primary)',
+              color: 'white',
+              padding: '0.75rem 1.5rem',
+              borderRadius: '9999px',
+              fontSize: '0.875rem',
+              fontWeight: 600,
+              boxShadow: '0 4px 20px rgba(139, 92, 246, 0.4)',
+              zIndex: 9999,
+              pointerEvents: 'none',
+              whiteSpace: 'nowrap'
+            }}
+          >
+            Copy your email address
+          </motion.div>
+        )}
+      </AnimatePresence>
     </footer>
   );
 }

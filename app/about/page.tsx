@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar, CheckCircle2, Trophy, Wrench, ArrowRight } from 'lucide-react';
+import { Calendar, CheckCircle2, Trophy, Wrench, ArrowRight, Mail, Linkedin, Github } from 'lucide-react';
 import Link from 'next/link';
 
 export default function About() {
@@ -208,6 +208,67 @@ export default function About() {
                 </motion.div>
               ))}
             </div>
+          </div>
+
+
+
+          {/* Contact Section - Updated Layout & Info */}
+          <div style={{ marginTop: '6rem', marginBottom: '6rem', textAlign: 'center' }}>
+            <h2 className="section-title" style={{ marginBottom: '3rem', textAlign: 'center' }}>
+              <span className="text-gradient">Contact</span>
+            </h2>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              style={{
+                background: 'rgba(25, 20, 45, 0.4)',
+                border: '1px solid rgba(139, 92, 246, 0.2)',
+                borderRadius: '1.5rem',
+                padding: '3rem 2rem',
+                textAlign: 'center',
+                boxShadow: '0 0 40px rgba(139, 92, 246, 0.1)',
+                margin: '0 auto',
+                maxWidth: '700px'
+              }}
+            >
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '500px', margin: '0 auto' }}>
+                {[
+                  { icon: <Mail size={22} />, text: 'worni5015@gmail.com', href: 'mailto:worni5015@gmail.com' },
+                  { icon: <Github size={22} />, text: 'GitHub 프로필', href: 'https://github.com/bibamung' },
+                  { icon: <Linkedin size={22} />, text: 'LinkedIn 프로필', href: 'https://www.linkedin.com/in/성원-김-7b4891357' }
+                ].map((item, i) => (
+                  <motion.a
+                    key={i}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.02, backgroundColor: 'rgba(139, 92, 246, 0.1)', borderColor: 'rgba(139, 92, 246, 0.4)' }}
+                    whileTap={{ scale: 0.98 }}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '1.25rem',
+                      padding: '1.25rem',
+                      background: 'rgba(30, 25, 50, 0.4)',
+                      border: '1px solid rgba(139, 92, 246, 0.15)',
+                      borderRadius: '1.25rem',
+                      color: 'white',
+                      fontSize: '1rem',
+                      fontWeight: 500,
+                      textDecoration: 'none',
+                      transition: 'all 0.3s'
+                    }}
+                  >
+                    <span style={{ color: 'var(--accent-primary)', display: 'flex', alignItems: 'center' }}>{item.icon}</span>
+                    {item.text}
+                  </motion.a>
+                ))}
+              </div>
+            </motion.div>
           </div>
 
           <div style={{ marginTop: '5rem', textAlign: 'center' }}>
