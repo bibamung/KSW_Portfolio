@@ -1,10 +1,20 @@
 'use client';
 
+import { useState } from 'react';
+
 import { motion } from 'framer-motion';
 import { Calendar, CheckCircle2, Trophy, Wrench, ArrowRight, Mail, Linkedin, Github } from 'lucide-react';
 import Link from 'next/link';
 
 export default function About() {
+  const [showToast, setShowToast] = useState(false);
+
+  const handleEmailClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigator.clipboard.writeText('worni5015@gmail.com');
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 1000);
+  };
   const skillCategories = [
     { name: '문서화', skills: ['Word', 'PPT', 'Excel'] },
     { name: '개발', skills: ['유니티', 'C#', 'C++'] },
@@ -236,15 +246,16 @@ export default function About() {
             >
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '500px', margin: '0 auto' }}>
                 {[
-                  { icon: <Mail size={22} />, text: 'worni5015@gmail.com', href: 'mailto:worni5015@gmail.com' },
-                  { icon: <Github size={22} />, text: 'GitHub 프로필', href: 'https://github.com/bibamung' },
-                  { icon: <Linkedin size={22} />, text: 'LinkedIn 프로필', href: 'https://www.linkedin.com/in/성원-김-7b4891357' }
+                  { icon: <Mail size={22} />, text: 'worni5015@gmail.com', href: '#', onClick: handleEmailClick },
+                  { icon: <Github size={22} />, text: 'GitHub 프로필', href: 'https://github.com/bibamung', target: '_blank' },
+                  { icon: <Linkedin size={22} />, text: 'LinkedIn 프로필', href: 'https://www.linkedin.com/in/성원-김-7b4891357', target: '_blank' }
                 ].map((item, i) => (
                   <motion.a
                     key={i}
                     href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    onClick={item.onClick}
+                    target={item.target}
+                    rel={item.target ? "noopener noreferrer" : undefined}
                     whileHover={{ scale: 1.02, backgroundColor: 'rgba(139, 92, 246, 0.1)', borderColor: 'rgba(139, 92, 246, 0.4)' }}
                     whileTap={{ scale: 0.98 }}
                     style={{
@@ -260,7 +271,8 @@ export default function About() {
                       fontSize: '1rem',
                       fontWeight: 500,
                       textDecoration: 'none',
-                      transition: 'all 0.3s'
+                      transition: 'all 0.3s',
+                      cursor: 'pointer'
                     }}
                   >
                     <span style={{ color: 'var(--accent-primary)', display: 'flex', alignItems: 'center' }}>{item.icon}</span>
@@ -295,6 +307,31 @@ export default function About() {
 
         </motion.div>
       </div>
+
+      {/* Toast Notification */}
+      {showToast && (
+        <motion.div
+          initial={{ opacity: 0, y: 50, x: '-50%' }}
+          animate={{ opacity: 1, y: 0, x: '-50%' }}
+          exit={{ opacity: 0, y: 50, x: '-50%' }}
+          style={{
+            position: 'fixed',
+            bottom: '2rem',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            background: 'var(--accent-primary)',
+            color: 'white',
+            padding: '0.75rem 1.5rem',
+            borderRadius: '0.75rem',
+            boxShadow: '0 10px 25px rgba(139, 92, 246, 0.3)',
+            zIndex: 1000,
+            fontSize: '0.875rem',
+            fontWeight: 600
+          }}
+        >
+          Copy E-mail Address
+        </motion.div>
+      )}
     </div>
   );
 }
