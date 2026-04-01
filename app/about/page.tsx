@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, CheckCircle2, Trophy, Wrench, ArrowRight, Mail, Linkedin, Github } from 'lucide-react';
 import Link from 'next/link';
 
@@ -309,29 +309,32 @@ export default function About() {
       </div>
 
       {/* Toast Notification */}
-      {showToast && (
-        <motion.div
-          initial={{ opacity: 0, y: 50, x: '-50%' }}
-          animate={{ opacity: 1, y: 0, x: '-50%' }}
-          exit={{ opacity: 0, y: 50, x: '-50%' }}
-          style={{
-            position: 'fixed',
-            bottom: '2rem',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            background: 'var(--accent-primary)',
-            color: 'white',
-            padding: '0.75rem 1.5rem',
-            borderRadius: '0.75rem',
-            boxShadow: '0 10px 25px rgba(139, 92, 246, 0.3)',
-            zIndex: 1000,
-            fontSize: '0.875rem',
-            fontWeight: 600
-          }}
-        >
-          Copy E-mail Address
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {showToast && (
+          <motion.div
+            initial={{ opacity: 0, y: 20, x: '-50%' }}
+            animate={{ opacity: 1, y: 0, x: '-50%' }}
+            exit={{ opacity: 0, y: 20, x: '-50%' }}
+            transition={{ duration: 0.3 }}
+            style={{
+              position: 'fixed',
+              bottom: '2rem',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              background: 'var(--accent-primary)',
+              color: 'white',
+              padding: '0.75rem 1.5rem',
+              borderRadius: '0.75rem',
+              boxShadow: '0 10px 25px rgba(139, 92, 246, 0.3)',
+              zIndex: 1000,
+              fontSize: '0.875rem',
+              fontWeight: 600
+            }}
+          >
+            Copy E-mail Address
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
